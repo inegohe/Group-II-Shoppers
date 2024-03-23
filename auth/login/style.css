@@ -1,0 +1,8 @@
+.container-fluid{
+    background-color: rgb(241, 241, 241);
+}
+
+.head{
+    border: 0;
+    border-bottom: solid 5px blue;
+}

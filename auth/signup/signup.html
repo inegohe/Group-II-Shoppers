@@ -10,71 +10,79 @@
 </head>
 
 <body>
-    <div class="container-fluid" style="background-color: rgb(241, 241, 241);">
-        <div class="row bg-primary">
+    <div class="container-fluid">
+        <div class="row">
             <div class="col">
-                <div class="container-fluid">
+                <div class="container">
                     <div class="row">
-                        <div class="col mt-5 mb-5 text-center ">
+                        <div class="head mt-5 mb-5 text-center ">
                             <h1 class="display-1 light">Group II Shoppers</h1>
-                            <h2 class="text-muted"><b>Your trusted merchant</b></h2>
+                            <h2 class="text-muted"><b>Your trusted online merchant</b></h2>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row justify-content-center ">
-            <div class="shadow border rounded mb-5 mt-5 col-md-3 col-8 bg-light">
-                <form>
+            <div class="shadow border rounded mb-5 mt-2 col-md-5 col-8 bg-light">
+                <form id="signup">
                     <div class="text-center mt-4 mb-4">
                         <h2>Sign Up</h2>
                     </div>
                     <div class="row mt-3 mb-3">
                         <div class="col">
-                            <input class="form-control" type="text" placeholder="First Name">
+                            <input id="fname" class="form-control" type="text" placeholder="First Name" onfocusout="validate()" required>
+                            <div class="feedback"></div>
                         </div>
                         <div class="col">
-                            <input class="form-control" type="text" placeholder="Last Name">
+                            <input id="lname" class="form-control" type="text" placeholder="Last Name" onfocusout="validate()" required>
+                            <div class="feedback"></div>
                         </div>
                     </div>
                     <div class="mb-3">
-                        <input class="form-control" type="email" placeholder="Email">
+                        <input id="email" class="form-control" type="email" placeholder="Email" onfocusout="validate()" required>
+                        <div class="feedback"></div>
                     </div>
                     <div class="mb-3">
-                        <input class="form-control" type="password" placeholder="Password">
+                        <input id="pwd-1" class="form-control" type="password" placeholder="Password" onfocusout="validate()" required>
+                        <div class="feedback"></div>
                     </div>
                     <div class="mb-3">
-                        <input class="form-control" type="password" placeholder="Comfirm Password">
+                        <input id="pwd-2" class="form-control" type="password" placeholder="Comfirm Password" onfocusout="validate()" required>
+                        <div class="feedback"></div>
                     </div>
                     <div class="mb-3">
-                        <input class="form-control" type="number" placeholder="Phone Number">
+                        <input id="phone" class="form-control" type="number" placeholder="Phone Number" onfocusout="validate()" required>
+                        <div class="feedback"></div>
                     </div>
                     <div class="mb-3">
-                        <input class="form-control" type="text" placeholder="Physical Address">
+                        <input id="address" class="form-control" type="text" placeholder="Physical Address" onfocusout="validate()" required>
+                        <div class="feedback"></div>
                     </div>
                     <div class="mb-3">
-                        <select class="form-select" aria-label="Default select example">
+                        <select id="city" class="form-select" aria-label="Default select example">
                             <option selected>Kampala</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option value="1">Mbarara</option>
+                            <option value="2">Mbale</option>
+                            <option value="3">Gulu</option>
                         </select>
                     </div>
                     <div class="mb-3">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" class="form-check-input">
+                            <input id="male" class="form-check-input" type="checkbox" class="form-check-input">
                             <label class="form-check-label">Male</label>
                         </div>
 
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" class="form-check-input">
+                            <input id="female" class="form-check-input" type="checkbox" class="form-check-input">
                             <label class="form-check-label">Female</label>
                         </div>
 
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" class="form-check-input">
+                            <input id="other" class="form-check-input" type="checkbox" class="form-check-input">
                             <label class="form-check-label">Other</label>
                         </div>
+                        <div class="feedback"></div>
                     </div>
                     <div class="mb-3">
                         <button type="submit" class="btn btn-outline-primary">Sign Up</button>
