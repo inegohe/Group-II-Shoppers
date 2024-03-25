@@ -16,6 +16,8 @@ form.addEventListener("submit", logIn);
    if (document.getElementsByClassName("form-control")[0].value == profileData.email && document.getElementsByClassName("form-control")[1].value == profileData.pwd){
     window.location.replace("../.././dashboard/overview/overview.html")
    }else{
-    document.getElementsByClassName("feedback")[0].innerHTML = "Email or Password incorect"
+    document.getElementsByClassName("feedback")[0].innerHTML = "<b>Email or Password incorect !</b>";
+    document.getElementsByClassName("form-control")[0].setAttribute("class", "form-control is-invalid");
+    document.getElementsByClassName("form-control")[1].setAttribute("class", "form-control is-invalid");
    }
    }
