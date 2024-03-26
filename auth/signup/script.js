@@ -1,4 +1,4 @@
-function validate() {
+function validate(event) {
     if (event.target.value == "") {
         event.target.setAttribute("class", "form-control is-invalid");
     } else if (event.target.value != "") {
