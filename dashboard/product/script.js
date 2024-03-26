@@ -39,6 +39,6 @@ export default function feeder(){
 }
 
 function print(item){
-    document.getElementById("feed").insertAdjacentHTML("afterend",`<div class="col-8"><div class="card rounded shadow border-0 mb-4">  <div class="row g-0"><div class="col-md-4"><img class="img-fluid rounded-start" src="../../assets/images/electronics/${item.fileName}" alt="Title"/></div><div class="col-md-8">           <div class="card-body"><h4 class="card-title">Ush 50000</h4><p class="card-text">Text</p><a href="#" class="btn btn-primary">BUY NOW</a></div></div></div></div></div>`);
+    document.getElementById("feed").insertAdjacentHTML("afterend",`<div class="col-8"><div class="card rounded shadow border-0 mb-4">  <div class="row g-0"><div class="col-md-4"><img class="img-fluid rounded-start" src="../../assets/images/electronics/${item.fileName}" alt="Title"/></div><div class="col-md-8">           <div class="card-body"><h4 class="card-title">${item.title}</h4><h5 class="card-title">Ush ${item.amount}</h5><p class="card-text">Text</p><a href="#" class="btn btn-primary">BUY NOW</a></div></div></div></div></div>`);
 }
 
