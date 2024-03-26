@@ -25,7 +25,7 @@ function item(array) {
             <div class="card rounded shadow border-0 mb-4">
                 <div class="row g-0">
                     <div class="col-md-4"><img class="img-fluid rounded-start"
-                            src="../../assets/images/electronics/${array[i].fileName}" style="height:10rem;" alt="Title" /></div>
+                            src="${array[i].fileName}" style="height:10rem;" alt="Title" /></div>
                     <div class="col-md-8">
                         <div class="card-body">
                             <h4 class="card-title">${array[i].title}</h4>

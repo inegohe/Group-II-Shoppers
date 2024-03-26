@@ -53,8 +53,11 @@ function addToCart() {
     prevcartData.push({
         title: window.event.target.parentNode.childNodes[0].innerText,
         amount: Number(window.event.target.parentNode.childNodes[1].innerText.split(" ")[1]),
-        fileName: window.event.target.parentNode.parentNode.previousSibling.childNodes[0].src
+        fileName: window.event.target.parentNode.parentNode.previousSibling.childNodes[0].getAttribute("src")
     })
+
+console.log(prevcartData);
+
 
 
     //console.log(prevcartData);
