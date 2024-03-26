@@ -1,4 +1,4 @@
-const dir = ["Aveeno Active Naturals.100000.jpeg","Bekay Glamour Set.250000.jpeg","Bleu De Chanel.350000.jpeg","Bvlgari Man.500000.jpeg","Cosmetic Glamour Set.480000.jpeg","Dolce & Gabbana.350000.jpeg","Makeup Brushes.100000.jpeg","Miss Dior Women.400000.jpeg","Nivea Oil Infused Lotion.70000.jpeg","Nivea.10000.jpeg","Obsession Men.350000.jpeg","Premium Lotion White Cosmetic.300000.jpeg","Versace Eros.450000.jpeg","Victoria Secret Bare Vanilla.250000.jpeg","Victoria Secret Lone Spell.250000.jpeg"]
+const dir = ["Aveeno Active Naturals.100000.jpeg","Bleu De Chanel.350000.jpeg","Bvlgari Man.500000.jpeg","Cosmetic Glamour Set.480000.jpeg","Dolce & Gabbana.350000.jpeg","Makeup Brushes.100000.jpeg","Miss Dior Women.400000.jpeg","Nivea Oil Infused Lotion.70000.jpeg","Nivea.10000.jpeg","Obsession Men.350000.jpeg","Premium Lotion White Cosmetic.300000.jpeg","Versace Eros.450000.jpeg","Victoria Secret Bare Vanilla.250000.jpeg","Victoria Secret Lone Spell.250000.jpeg"]
 
 //Preparing the json data
 let data = JSON.stringify(dir)
