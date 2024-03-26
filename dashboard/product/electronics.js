@@ -45,6 +45,9 @@ function print(item) {
 //adding to cart
 
 function addToCart() {
+    if (localStorage.getItem("cartData") == null) {
+        localStorage.setItem("cartData", JSON.stringify([]))
+    }
     //retrieve
     const prevcartData = JSON.parse(localStorage.getItem("cartData"));
     prevcartData.push({
@@ -52,7 +55,9 @@ function addToCart() {
         amount: Number(window.event.target.parentNode.childNodes[1].innerText.split(" ")[1]),
         fileName: window.event.target.parentNode.parentNode.previousSibling.childNodes[0].src
     })
-    console.log(prevcartData);
+
+
+    //console.log(prevcartData);
 
     //store
     localStorage.setItem("cartData", JSON.stringify(prevcartData));

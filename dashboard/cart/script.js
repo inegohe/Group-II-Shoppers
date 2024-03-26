@@ -2,7 +2,7 @@
 
 const prevcartData = JSON.parse(localStorage.getItem("cartData"));
 
-console.log(total(prevcartData));
+console.log(total(prevcartData) , '55');
 
 function total(array) {
     if (array != null) {
