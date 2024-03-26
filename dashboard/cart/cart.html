@@ -3,11 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.css">
+    <link rel="html" href="/dashboard/product/fashion.html">
+    <title>Cart</title>
 </head>
-<body>
-    
-<script src="./script.js"></script>
+<body onload="item(prevcartData)">
+    <nav class="navbar fixed-top shadow navbar-expand-sm navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"><strong>GROUP II</strong> SHOPPERS</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ms-auto me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../overview/overview.html">Overview
+                            <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../cart/cart.html">Cart</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle"  aria-current="page" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="true" aria-expanded="false">Product</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../product/fashion.html">Fashion</a>
+                            <a class="dropdown-item active" href="../product/electronics.html">Electronics</a>
+                            <a class="dropdown-item" href="../product/mobile-phones.html">Mobile Phones</a>
+                            <a class="dropdown-item" href="../product/home-furniture.html">Home Furniture</a>
+                            <a class="dropdown-item" href="../product/health-and-beauty.html">Health and beauty</a>
+                            <a class="dropdown-item" href="../product/services.html">Services</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                    </li>
+                </ul>
+                <form class="d-flex my-2 my-lg-0">
+                    <input class="form-control me-sm-2" type="text" placeholder="Search" />
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5 pt-3">
+        <div class="row">
+            <div class="col border-bottom mb-5">
+                <h1 class="display-2">Cart</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="row"  id="feed"></div>
+            </div>
+            <div class="col-5">
+                <div>
+                    <a class="btn btn-primary mb-5 " onclick="clearCart()">Clear Cart</a>  
+                </div>
+                <div>
+                    <h1>Cart - Summary</h1>
+                </div>
+                <div>
+                    <p>Items in Cart: </p>
+                    
+                    <div id="cart-items">
+                        <ol id="cart-items"></ol>
+                        </ol>
+                    </div>
+                    <p class="mt-3"><b>Total Amount</b></p>
+                    <div class="mb-3 total-amount">-</div>
+                </div>
+                <div>
+                    <a class="btn btn-primary">Comfirm Purchase</a>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js">
+    </script>
+    <script src="../../assets/bootstrap/js/bootstrap.bundle.js"></script>
 </body>
 </html>
