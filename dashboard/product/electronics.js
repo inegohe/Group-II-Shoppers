@@ -7,7 +7,7 @@ let data = JSON.stringify(dir)
 //assigning the array from json to dirData
 const dirData = JSON.parse(data);
 
-//creating a basic array to store the ite objects
+//creating a basic array to store the item objects
 const items = [];
 
 //creating the item objects from the dirData and pushing them to the items array
