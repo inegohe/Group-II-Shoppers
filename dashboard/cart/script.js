@@ -11,6 +11,7 @@ function total(array) {
             sum = sum + array[i].amount;
         }
         document.getElementsByClassName("total-amount")[0].innerHTML = `Ush ${sum}`;
+        document.getElementById("comfirm-amount").innerHTML = `Ush ${sum}`;
     } else {
         return "Cart is cleared";
     }
