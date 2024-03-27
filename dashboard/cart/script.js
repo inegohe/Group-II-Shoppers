@@ -32,7 +32,7 @@ function item(array) {
                             <h4 class="card-title">${array[i].title}</h4>
                             <h5 class="card-title"></h5>
                             <p class="card-text">Ush ${array[i].amount}</p>
-                            <a href="#" class="btn btn-danger">BUY NOW</a></div>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#purchaseNow-modal" class="btn btn-danger" onclick="purchaseNow()">BUY NOW</a></div>
                     </div>
                 </div>
             </div>
@@ -43,6 +43,12 @@ function item(array) {
     }
     total(array);
 }
+
+function purchaseNow(){
+    document.getElementById("comfirm-amount-now").innerHTML = `Ush ${Number(window.event.target.parentNode.childNodes[5].innerText.split(" ")[1])}`;
+    console.log(Number(window.event.target.parentNode.childNodes[5].innerText.split(" ")[1]));
+}
+
 
 function clearCart() {
     //clear
