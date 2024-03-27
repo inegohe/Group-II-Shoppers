@@ -44,7 +44,7 @@ function print(item) {
 
 //adding to cart
 
-function addToCart() {
+function addToCart(event) {
     if (localStorage.getItem("cartData") == null) {
         localStorage.setItem("cartData", JSON.stringify([]))
     }
