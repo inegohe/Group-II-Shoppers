@@ -23,6 +23,8 @@ function item(array) {
     if (array != null) {
         for (i = 0; i < array.length; i++) {
             document.getElementById("cart-items").insertAdjacentHTML("afterend", `<li>${array[i].title}</li>`);
+            
+            // TODO: How can we use locale string in these printouts
             document.getElementById("feed").insertAdjacentHTML("afterend", `<div class="col">
             <div class="card rounded shadow border-0 mb-4">
                 <div class="row g-0">
