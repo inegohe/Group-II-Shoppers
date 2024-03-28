@@ -10,8 +10,8 @@ function total(array) {
         for (i = 0; i < array.length; i++) {
             sum = sum + array[i].amount;
         }
-        document.getElementsByClassName("total-amount")[0].innerHTML = `Ush ${sum}`;
-        document.getElementById("comfirm-amount").innerHTML = `Ush ${sum}`;
+        document.getElementsByClassName("total-amount")[0].innerHTML = `Ush ${sum.toLocaleString}`;
+        document.getElementById("comfirm-amount").innerHTML = `Ush ${sum.toLocaleString()}`;
     } else {
         return "Cart is cleared";
     }
@@ -31,7 +31,7 @@ function item(array) {
                         <div class="card-body">
                             <h4 class="card-title">${array[i].title}</h4>
                             <h5 class="card-title"></h5>
-                            <p class="card-text">Ush ${array[i].amount}</p>
+                            <p class="card-text">Ush ${array[i].amount.toLocaleString()}</p>
                             <a href="#" data-bs-toggle="modal" data-bs-target="#purchaseNow-modal" class="btn btn-danger" onclick="purchaseNow()">BUY NOW</a></div>
                     </div>
                 </div>
@@ -45,8 +45,7 @@ function item(array) {
 }
 
 function purchaseNow() {
-    document.getElementById("comfirm-amount-now").innerHTML = `Ush ${Number(window.event.target.parentNode.childNodes[5].innerText.split(" ")[1])}`;
-    console.log(Number(window.event.target.parentNode.childNodes[5].innerText.split(" ")[1]));
+    document.getElementById("comfirm-amount-now").innerHTML = `Ush ${Number(window.event.target.parentNode.childNodes[5].innerText.split(" ")[1]).toLocaleString()}`;
 }
 
 

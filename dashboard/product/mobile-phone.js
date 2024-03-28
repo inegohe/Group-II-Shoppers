@@ -95,7 +95,7 @@ function print(item) {
       <img class="img-fluid rounded-start" src="../../assets/images/mobile-phones/${item.fileName}" style="height:10rem;" alt="Title"/>
       </div><div class="col-md-8">
       <div class="card-body"><h4 class="card-title">${item.title}</h4>
-      <p class="card-text">Ush ${item.amount}</p>
+      <p class="card-text">Ush ${item.amount.toLocaleString()}</p>
       <a href="#" data-bs-toggle="modal" data-bs-target="#purchase-modal" class="btn btn-danger" onclick="purchaseNow()">BUY NOW</a>
       <a href="#" class="add-to-cart ms-5 btn btn-primary" onclick="addToCart()">add to Cart</a>
       </div></div></div></div></div>`
@@ -154,7 +154,7 @@ function addToCart(event) {
 function purchaseNow(event) {
   document.getElementById('comfirm-amount')
     .innerHTML = (
-      `Ush ${Number(
+      `Ush ${
         window.event // Event object which is created whenever an event as occured
           .target
           .parentNode
@@ -164,6 +164,6 @@ function purchaseNow(event) {
 
           // Splits the Ush 2000 so as it only stores the numerical part
           .split(' ')[1]
-      )}`
+      }`
     );
 }
