@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable no-console */
 /* eslint-disable padded-blocks */
 /* eslint-disable linebreak-style */
 /* eslint-disable comma-dangle */
@@ -103,16 +105,21 @@ function print(item) {
 function addToCart(event) {
 
   // initialize the local storage if it's empty
-  if (localStorage.getItem('cartData') == null) {
-    localStorage.setItem(
-      'cartData',
-      JSON.stringify([]),
+  if (
+    localStorage
+      .getItem('cartData') === null) {
+    localStorage
+      .setItem(
+        'cartData',
+        JSON.stringify([])
 
-    );
+      );
   }
 
   // Retrieve the items already in the cart
   const prevcartData = JSON.parse(localStorage.getItem('cartData'));
+
+  // Updates the content by directly reading it from the DOM
   prevcartData.push({
     title: window.event
       .target
@@ -122,7 +129,7 @@ function addToCart(event) {
       window.event
         .target
         .parentNode
-        .childNodes[1].innerText
+        .childNodes[2].innerText
         .split(' ')[1]
     ),
     fileName:
@@ -130,9 +137,10 @@ function addToCart(event) {
         .target
         .parentNode
         .parentNode
-        .previousSibling.childNodes[0]
+        .previousSibling.childNodes[1]
         .getAttribute('src'),
   });
+  console.log();
 
   // Update the items in the cart storage
   localStorage.setItem(
@@ -146,10 +154,14 @@ function purchaseNow(event) {
   document.getElementById('comfirm-amount')
     .innerHTML = (
       `Ush ${Number(
-        window.event
+        window.event // Event object which is created whenever an event as occured
           .target
           .parentNode
-          .childNodes[1].innerText
+
+          // The innerText returns the textual content of the DOM element
+          .childNodes[2].innerText
+
+          // Splits the Ush 2000 so as it only stores the numerical part
           .split(' ')[1]
       )}`
     );
