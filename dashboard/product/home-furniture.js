@@ -95,7 +95,7 @@ function print(item) {
       <img class="img-fluid rounded-start" src="../../assets/images/home-furniture/${item.fileName}" style="height:10rem;" alt="Title"/>
       </div><div class="col-md-8">
       <div class="card-body"><h4 class="card-title">${item.title}</h4>
-      <p class="card-text">Ush ${item.amount.toLocaleString()}</p>
+      <p class="card-text">Ush ${item.amount}</p>
       <a href="#" data-bs-toggle="modal" data-bs-target="#purchase-modal" class="btn btn-danger" onclick="purchaseNow()">BUY NOW</a>
       <a href="#" class="add-to-cart ms-5 btn btn-primary" onclick="addToCart()">add to Cart</a>
       </div></div></div></div></div>`
