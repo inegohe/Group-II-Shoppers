@@ -19,7 +19,7 @@ function total(array) {
 
 
 function item(array) {
-    if(array != null){
+    if (array != null) {
         for (i = 0; i < array.length; i++) {
             document.getElementById("cart-items").insertAdjacentHTML("afterend", `<li>${array[i].title}</li>`);
             document.getElementById("feed").insertAdjacentHTML("afterend", `<div class="col">
@@ -38,13 +38,13 @@ function item(array) {
             </div>
         </div>`);
         }
-    }else{
+    } else {
         document.getElementById("feed").innerHTML = "<h2>Your Cart is Empty....</h2>";
     }
     total(array);
 }
 
-function purchaseNow(){
+function purchaseNow() {
     document.getElementById("comfirm-amount-now").innerHTML = `Ush ${Number(window.event.target.parentNode.childNodes[5].innerText.split(" ")[1])}`;
     console.log(Number(window.event.target.parentNode.childNodes[5].innerText.split(" ")[1]));
 }

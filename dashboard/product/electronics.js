@@ -41,6 +41,7 @@ function loadJSONData() {
     });
 }
 
+// Calling the load data function once the script is loaded in the DOM
 loadJSONData();
 
 function processItems(string) {
